@@ -49,7 +49,7 @@ namespace Controlador
                 }
                 else
                 {
-                    MessageBox.Show("La dirección no tiene el formato adecuado.",
+                    MessageBox.Show("La descripcion no tiene el formato adecuado.",
                     "Error dirección", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } 
@@ -83,7 +83,7 @@ namespace Controlador
 
                 if (value >= 0)
                 {
-                    _precio = value;
+                    _porcentaje = value;
                 }
                 else
                 {
@@ -111,7 +111,24 @@ namespace Controlador
         }
         public string imagen { get; set; }
 
-        public int stock { get; set; }
+        private int _stock;
+        public int stock
+        {
+            get { return _stock; }
+            set
+            {
+
+                if (value >= 0)
+                {
+                    _stock = value;
+                }
+                else
+                {
+                    MessageBox.Show("El stock debe ser 0 o mayor.",
+                    "Error con el porcentaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
         public bool estado_producto { get; set; }   
         public int id_categoria { get; set; }

@@ -93,7 +93,7 @@ namespace Controlador
             }
         }
 
-        private decimal _isbn;
+        private string _isbn;
         public string isbn {
             get { return _isbn; }
             set

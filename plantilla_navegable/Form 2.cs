@@ -167,11 +167,6 @@ namespace plantilla_navegable
             OpenChildForm(formProduct, sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormEstados(), sender);
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -179,15 +174,9 @@ namespace plantilla_navegable
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormTipos(), sender);
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormUsuario(), sender);
+            OpenChildForm(new Forms.FormCliente(), sender);
 
         }
 

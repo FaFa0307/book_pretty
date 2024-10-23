@@ -98,7 +98,7 @@ namespace Controlador
             get { return _isbn; }
             set
             {
-                if (Validator.ValidateAlphanumeric(value))
+                if (Validator.ValidateTextOrtographic(value))
                 {
                     _isbn = value;
                 }

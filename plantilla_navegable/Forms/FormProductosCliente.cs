@@ -33,6 +33,9 @@ namespace plantilla_navegable.Forms
         {
             flowLayoutPanel1.Controls.Clear(); // Limpiar el panel
 
+            // Habilitar el desplazamiento automático
+            flowLayoutPanel1.AutoScroll = true; // Habilitar el AutoScroll del FlowLayoutPanel
+
             foreach (var producto in productos)
             {
                 // Crear un panel que será la carta del producto

@@ -118,6 +118,14 @@ public class Validator
         return Regex.IsMatch(value, @"^[67]\d{7}$");
     }
 
+    // Validar una cadena de texto que respete las reglas ortograficas 🧐.
+    // Validar una cadena de texto que acepte números, guiones, espacios en blanco y caracteres ortográficos.
+    public static bool ValidateTextOrtographic(string value)
+    {
+        return Regex.IsMatch(value, @"^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s,;.\-\+\¿\?\!\(\)]*$");
+    }
+
+
     // Validar una cadena alfanumérica.
     public static bool ValidateAlphanumeric(string value)
     {

@@ -29,23 +29,28 @@ namespace plantilla_navegable.Forms
         {
             // Ruta donde se guardarán las imágenes (dentro del proyecto)
             string carpetaDestino = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute);
+
             if (!Directory.Exists(carpetaDestino))
             {
                 Directory.CreateDirectory(carpetaDestino); // Crear la carpeta si no existe
             }
 
-            // Obtener el nombre del archivo de la imagen
-            string nombreArchivo = Path.GetFileName(rutaOriginal);
+            // Obtener la extensión del archivo de la imagen (e.g., .jpg, .png)
+            string extensionArchivo = Path.GetExtension(rutaOriginal);
+
+            // Generar un nombre de archivo único utilizando un GUID
+            string nombreUnico = Guid.NewGuid().ToString() + extensionArchivo;
 
             // Ruta completa donde se guardará la imagen
-            string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo);
+            string rutaDestino = Path.Combine(carpetaDestino, nombreUnico);
 
             // Copiar la imagen al directorio de destino
             File.Copy(rutaOriginal, rutaDestino, true);
 
-            // Retornar el nombre del archivo (solo el nombre, no la ruta completa)
-            return nombreArchivo;
+            // Retornar el nombre del archivo (solo el nombre único, no la ruta completa)
+            return nombreUnico;
         }
+
 
         private void EliminarImagen()
         {

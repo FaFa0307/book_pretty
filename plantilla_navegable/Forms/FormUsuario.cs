@@ -194,14 +194,38 @@ namespace plantilla_navegable.Forms
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 0)
+            //if (e.RowIndex > 0)
+            //{
+            //    DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+
+            //    txtId.Text = fila.Cells[0].Value.ToString();
+            //    txtUsuario.Text = fila.Cells[1].Value.ToString();
+            //    cmbDock.SelectedIndex = (int.Parse(fila.Cells[2].Value.ToString()) - 1);
+            //    txtdoc.Text = fila.Cells[3].Value.ToString();
+            //    txttelefono.Text = fila.Cells[4].Value.ToString();
+            //    txtcorreo.Text = fila.Cells[5].Value.ToString();
+            //    txtdireccion.Text = fila.Cells[6].Value.ToString();
+            //    txtclave.Text = fila.Cells[7].Value.ToString();
+            //    cmbEstado.SelectedIndex = (int.Parse(fila.Cells[8].Value.ToString()) - 1);
+            //}
+            if (e.RowIndex >= 0) // Cambiado a >= 0 para incluir la primera fila
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
 
                 txtId.Text = fila.Cells[0].Value.ToString();
                 txtUsuario.Text = fila.Cells[1].Value.ToString();
                 cmbDock.SelectedIndex = (int.Parse(fila.Cells[2].Value.ToString()) - 1);
-                txtdoc.Text = fila.Cells[3].Value.ToString();
+
+                // Verifica que el DUI no sea nulo
+                if (fila.Cells[3].Value != null)
+                {
+                    txtdoc.Text = fila.Cells[3].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("El documento no tiene valor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 txttelefono.Text = fila.Cells[4].Value.ToString();
                 txtcorreo.Text = fila.Cells[5].Value.ToString();
                 txtdireccion.Text = fila.Cells[6].Value.ToString();

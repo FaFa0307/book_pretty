@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Controlador
 {
@@ -17,7 +18,27 @@ namespace Controlador
         public static int id_producto { get; set; }
         public string nombre_producto { get; set; }
         public string descripcion { get; set; }
-        public decimal precio { get; set; }
+
+        private decimal _precio; // Cambiado a decimal
+        public decimal precio // Cambiado a decimal
+        {
+            get { return _precio; }
+            set
+            {
+                // Usa la validación para verificar si el valor es un número decimal válido
+                if (value >= 0) // Verifica si el valor es mayor o igual a 0
+                {
+                    _precio = value;
+                }
+                else
+                {
+                    MessageBox.Show("El precio debe ser un número decimal válido mayor o igual a 0.",
+                    "Error con el precio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
         public decimal porcentaje { get; set; }
         public string isbn { get; set; }
         public string imagen { get; set; }

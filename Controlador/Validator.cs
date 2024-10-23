@@ -25,6 +25,18 @@ public class Validator
         return false;
     }
 
+
+    public static bool ValidateDecimalNumber(string value)
+    {
+        // Intenta convertir la cadena a un decimal
+        if (decimal.TryParse(value, out decimal result) && result >= 0)
+        {
+            return true;
+        }
+        return false; // Retorna false si no se puede convertir o si es menor a 0
+    }
+
+
     // Validar un archivo de imagen.
     public static bool ValidateImageFile(string filePath, int dimension)
     {

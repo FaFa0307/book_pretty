@@ -15,9 +15,45 @@ namespace Controlador
         public controladorproductos() { }   
         //Aqui los atributos
 
+
         public static int id_producto { get; set; }
-        public string nombre_producto { get; set; }
-        public string descripcion { get; set; }
+
+
+        private string _nombre_producto;
+
+        public string nombre_producto 
+        {
+            get { return _nombre_producto; }
+            set
+            {
+                if (Validator.ValidateAlphabetic(value))
+                {
+                    _nombre_producto = value;
+                }
+                else
+                {
+                    MessageBox.Show("El nombre debe contener solo letras.",
+                    "Error con el nombre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private string _descripcion;
+        public string descripcion {
+            get { return _descripcion; }
+            set
+            {
+                if (Validator.ValidateAlphanumeric(value))
+                {
+                    _descripcion = value;
+                }
+                else
+                {
+                    MessageBox.Show("La descripcion no tiene el formato adecuado.",
+                    "Error dirección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+        }
 
         private decimal _precio; // Cambiado a decimal
         public decimal precio // Cambiado a decimal
@@ -38,11 +74,62 @@ namespace Controlador
             }
         }
 
+        private decimal _porcentaje;
+        public decimal porcentaje
+        {
+            get { return _porcentaje; }
+            set
+            {
 
-        public decimal porcentaje { get; set; }
-        public string isbn { get; set; }
+                if (value >= 0)
+                {
+                    _porcentaje = value;
+                }
+                else
+                {
+                    MessageBox.Show("El procentaje debe ser 0 o mayor.",
+                    "Error con el porcentaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private decimal _isbn;
+        public string isbn {
+            get { return _isbn; }
+            set
+            {
+                if (Validator.ValidateAlphanumeric(value))
+                {
+                    _isbn = value;
+                }
+                else
+                {
+                    MessageBox.Show("ISBN no tiene el formato adecuado.",
+                    "Error dirección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         public string imagen { get; set; }
-        public int stock { get; set; }
+
+        private int _stock;
+        public int stock
+        {
+            get { return _stock; }
+            set
+            {
+
+                if (value >= 0)
+                {
+                    _stock = value;
+                }
+                else
+                {
+                    MessageBox.Show("El stock debe ser 0 o mayor.",
+                    "Error con el porcentaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public bool estado_producto { get; set; }   
         public int id_categoria { get; set; }
         public int id_editorial { get; set; }

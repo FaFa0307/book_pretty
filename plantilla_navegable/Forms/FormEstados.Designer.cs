@@ -38,9 +38,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnActualizarEstadoPedido = new System.Windows.Forms.Button();
             this.btnIngresarEstadopedido = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbuscarestadopedido = new System.Windows.Forms.TextBox();
             this.dgvestadopedido = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -51,9 +48,6 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.btnActualizarEstadousuario = new System.Windows.Forms.Button();
             this.btnIngresarEstadousuario = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.dgvestadousuario = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -64,9 +58,6 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnactualizarestadodevolucion = new System.Windows.Forms.Button();
             this.btningresarestadodevolucion = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.dgvestadodevolucion = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -78,22 +69,16 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnactualizarestadoreembolso = new System.Windows.Forms.Button();
             this.btningresarestadoreembolso = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.dgvestadoreembolso = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtestadopago = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnactualizarestadopago = new System.Windows.Forms.Button();
             this.btningresaresradopagos = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.dgvestadopagos = new System.Windows.Forms.DataGridView();
             this.txtidestadopago = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -209,9 +194,6 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel4.Controls.Add(this.btnActualizarEstadoPedido, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnIngresarEstadopedido, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnBuscar, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtbuscarestadopedido, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 55);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -239,33 +221,6 @@
             this.btnIngresarEstadopedido.Text = "Ingresar";
             this.btnIngresarEstadopedido.UseVisualStyleBackColor = true;
             this.btnIngresarEstadopedido.Click += new System.EventHandler(this.btnIngresar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(307, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(73, 42);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 48);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Buscar estado pedido";
-            // 
-            // txtbuscarestadopedido
-            // 
-            this.txtbuscarestadopedido.Location = new System.Drawing.Point(79, 3);
-            this.txtbuscarestadopedido.Multiline = true;
-            this.txtbuscarestadopedido.Name = "txtbuscarestadopedido";
-            this.txtbuscarestadopedido.Size = new System.Drawing.Size(222, 39);
-            this.txtbuscarestadopedido.TabIndex = 0;
             // 
             // dgvestadopedido
             // 
@@ -352,9 +307,6 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel10.Controls.Add(this.btnActualizarEstadousuario, 4, 0);
             this.tableLayoutPanel10.Controls.Add(this.btnIngresarEstadousuario, 3, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button12, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox12, 1, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(5, 83);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
@@ -381,33 +333,6 @@
             this.btnIngresarEstadousuario.Text = "Ingresar";
             this.btnIngresarEstadousuario.UseVisualStyleBackColor = true;
             this.btnIngresarEstadousuario.Click += new System.EventHandler(this.btnIngresarEstadousuario_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(307, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(73, 42);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "Buscar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 32);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Buscar estado ";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(79, 3);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(222, 39);
-            this.textBox12.TabIndex = 0;
             // 
             // dgvestadousuario
             // 
@@ -494,9 +419,6 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel3.Controls.Add(this.btnactualizarestadodevolucion, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.btningresarestadodevolucion, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button9, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox9, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 78);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -523,33 +445,6 @@
             this.btningresarestadodevolucion.Text = "Ingresar";
             this.btningresarestadodevolucion.UseVisualStyleBackColor = true;
             this.btningresarestadodevolucion.Click += new System.EventHandler(this.btningresarestadodevolucion_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(307, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(73, 42);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Buscar";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 48);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Buscar estado pedido";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(79, 3);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(222, 39);
-            this.textBox9.TabIndex = 0;
             // 
             // dgvestadodevolucion
             // 
@@ -644,9 +539,6 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel6.Controls.Add(this.btnactualizarestadoreembolso, 4, 0);
             this.tableLayoutPanel6.Controls.Add(this.btningresarestadoreembolso, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.textBox3, 1, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 55);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
@@ -673,33 +565,6 @@
             this.btningresarestadoreembolso.Text = "Ingresar";
             this.btningresarestadoreembolso.UseVisualStyleBackColor = true;
             this.btningresarestadoreembolso.Click += new System.EventHandler(this.btningresarestadoreembolso_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(307, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 42);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 48);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Buscar estado pedido";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(79, 3);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 39);
-            this.textBox3.TabIndex = 0;
             // 
             // dgvestadoreembolso
             // 
@@ -749,7 +614,7 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.84335F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.15665F));
-            this.tableLayoutPanel7.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.txtestadopago, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -758,15 +623,15 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(549, 46);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // label10
+            // label5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 32);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Estado a ingresar:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 32);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Estado a ingresar:";
             // 
             // txtestadopago
             // 
@@ -786,9 +651,6 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel8.Controls.Add(this.btnactualizarestadopago, 4, 0);
             this.tableLayoutPanel8.Controls.Add(this.btningresaresradopagos, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button6, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.textBox5, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 55);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
@@ -815,33 +677,6 @@
             this.btningresaresradopagos.Text = "Ingresar";
             this.btningresaresradopagos.UseVisualStyleBackColor = true;
             this.btningresaresradopagos.Click += new System.EventHandler(this.btningresaresradopagos_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(307, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 42);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Buscar";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 48);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Buscar estado pedido";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(79, 3);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 39);
-            this.textBox5.TabIndex = 0;
             // 
             // dgvestadopagos
             // 
@@ -887,21 +722,18 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadopedido)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadousuario)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadodevolucion)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -909,7 +741,6 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadoreembolso)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -917,7 +748,6 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestadopagos)).EndInit();
             this.ResumeLayout(false);
 
@@ -933,10 +763,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox txtbuscarestadopedido;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnIngresarEstadopedido;
         private System.Windows.Forms.Button btnActualizarEstadoPedido;
         private System.Windows.Forms.DataGridView dgvestadopedido;
@@ -952,9 +779,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Button btnActualizarEstadousuario;
         private System.Windows.Forms.Button btnIngresarEstadousuario;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.DataGridView dgvestadousuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtidestadodevolucion;
@@ -964,9 +788,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnactualizarestadodevolucion;
         private System.Windows.Forms.Button btningresarestadodevolucion;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.DataGridView dgvestadodevolucion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtidestadoreembolso;
@@ -977,20 +798,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnactualizarestadoreembolso;
         private System.Windows.Forms.Button btningresarestadoreembolso;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dgvestadoreembolso;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtestadopago;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button btnactualizarestadopago;
         private System.Windows.Forms.Button btningresaresradopagos;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dgvestadopagos;
         private System.Windows.Forms.TextBox txtidestadopago;
         private System.Windows.Forms.Label label6;

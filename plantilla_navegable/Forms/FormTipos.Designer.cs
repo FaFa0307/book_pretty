@@ -37,8 +37,6 @@
             this.textBox1tipodocumento = new System.Windows.Forms.TextBox();
             this.dgvtipodoc = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btningresartp = new System.Windows.Forms.Button();
             this.btnactualizartp = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -214,8 +212,6 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btningresartp, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnactualizartp, 4, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 56);
@@ -224,25 +220,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(557, 45);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Buscar ";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(306, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btningresartp
             // 
@@ -824,7 +801,6 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtipodoc)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -870,10 +846,8 @@
         private System.Windows.Forms.TextBox textBox1tipodocumento;
         private System.Windows.Forms.TextBox textBox2idtd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btningresartp;
         private System.Windows.Forms.Button btnactualizartp;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;

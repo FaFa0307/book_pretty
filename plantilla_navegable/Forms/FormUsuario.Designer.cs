@@ -47,8 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnactualizar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -250,8 +248,6 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnactualizar, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btneliminar, 4, 0);
@@ -262,24 +258,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(535, 50);
             this.tableLayoutPanel2.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 16);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Buscar ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(61, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 44);
-            this.textBox1.TabIndex = 44;
             // 
             // btnAgregar
             // 
@@ -355,7 +333,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -388,8 +365,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnlimpiar;
     }
 }

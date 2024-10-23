@@ -42,7 +42,15 @@ namespace plantilla_navegable.Forms
 
                 // Crear y configurar un PictureBox para la imagen del producto
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Image = Image.FromFile(Path.Combine(Application.StartupPath, "imagenes", "productos", producto.Imagen)); // Ruta de la imagen
+                string rutaImagen = Path.Combine(Application.StartupPath, "imagenes", "productos", producto.Imagen);
+
+                // Validar si la imagen existe, si no, cargar la imagen por defecto
+                if (!File.Exists(rutaImagen))
+                {
+                    rutaImagen = Path.Combine(Application.StartupPath, "imagenes", "productos", "default.png");
+                }
+
+                pictureBox.Image = Image.FromFile(rutaImagen); // Ruta de la imagen (o default.png si no existe)
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBox.Size = new Size(180, 150);
                 pictureBox.Location = new Point(10, 10);

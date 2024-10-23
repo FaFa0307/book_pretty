@@ -39,7 +39,7 @@ namespace plantilla_navegable
             else if (controlador.AutenticarCliente())
             {
                 // Abrir el formulario principal para cliente
-                Form1 clientForm = new Form1(false); // false indica permisos de cliente
+                Form2 clientForm = new Form2(false); // false indica permisos de cliente
                 clientForm.Show();
                 this.Hide();
             }

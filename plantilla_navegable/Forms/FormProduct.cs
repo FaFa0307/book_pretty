@@ -14,6 +14,7 @@ namespace plantilla_navegable.Forms
 {
     public partial class FormProduct : Form
     {
+        private const string imageRoute = "imagenes/productos/";
         private Form1 mainForm;
         private string rutaImagen; // Variable para almacenar la ruta de la imagen
 
@@ -22,7 +23,59 @@ namespace plantilla_navegable.Forms
         {
             InitializeComponent();
             this.mainForm = formPrincipal; // Guardamos la referencia del formulario principal
-           
+
+        }
+        private string GuardarImagen(string rutaOriginal)
+        {
+            // Ruta donde se guardarán las imágenes (dentro del proyecto)
+            string carpetaDestino = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute);
+            if (!Directory.Exists(carpetaDestino))
+            {
+                Directory.CreateDirectory(carpetaDestino); // Crear la carpeta si no existe
+            }
+
+            // Obtener el nombre del archivo de la imagen
+            string nombreArchivo = Path.GetFileName(rutaOriginal);
+
+            // Ruta completa donde se guardará la imagen
+            string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo);
+
+            // Copiar la imagen al directorio de destino
+            File.Copy(rutaOriginal, rutaDestino, true);
+
+            // Retornar el nombre del archivo (solo el nombre, no la ruta completa)
+            return nombreArchivo;
+        }
+
+        private void EliminarImagen()
+        {
+            string rutaImagenDefault = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, "default.png"); // Imagen por defecto
+
+            // Verificar si la imagen actual no es la imagen por defecto
+            if (rutaImagen != rutaImagenDefault && !string.IsNullOrEmpty(rutaImagen))
+            {
+                // Ruta de la imagen seleccionada
+                string rutaImagenSeleccionada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, Path.GetFileName(rutaImagen));
+
+                if (File.Exists(rutaImagenSeleccionada))
+                {
+                    // Eliminar la imagen seleccionada
+                    File.Delete(rutaImagenSeleccionada);
+                    MessageBox.Show("Imagen eliminada con éxito.");
+
+                    // Restablecer a la imagen por defecto
+                    pictureBoxImagen.Image = new Bitmap(rutaImagenDefault);
+                    rutaImagen = rutaImagenDefault;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró la imagen seleccionada.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede eliminar la imagen por defecto.");
+            }
         }
 
         controladorproductos objcon = new controladorproductos();
@@ -106,9 +159,10 @@ namespace plantilla_navegable.Forms
 
         }
 
-       
 
-        
+
+
+
         void insertarDatos()
         {
             controladorproductos objproductos = new controladorproductos();
@@ -130,13 +184,11 @@ namespace plantilla_navegable.Forms
                 MessageBox.Show("Por favor, seleccione una imagen antes de insertar el producto.");
                 return;
             }
-            if (rutaImagen.Length > 255) // Cambia 255 al tamaño real que tengas en la base de datos
-            {
-                MessageBox.Show("La ruta de la imagen es demasiado larga. Asegúrate de que no exceda los 255 caracteres.");
-                return;
-            }
-            // Guardar la ruta de la imagen
-            objproductos.imagen = rutaImagen;
+            // Guardar la imagen en la carpeta del proyecto y obtener solo el nombre del archivo
+            string nombreImagen = GuardarImagen(rutaImagen);
+
+            objproductos.imagen = nombreImagen; // Guardar solo el nombre de la imagen en la base de datos
+
             //---------------------------------AQUI SIGUE EL CODIGO--------------------
             try
             {
@@ -152,8 +204,9 @@ namespace plantilla_navegable.Forms
                 MessageBox.Show("Error al insertar el producto: " + ex.Message);
             }
         }
-        
-        void Actualizardatos() {
+
+        void Actualizardatos()
+        {
             controladorproductos objproductos = new controladorproductos();
             objproductos.nombre_producto = txtnombrep.Text;
             objproductos.descripcion = txtdescripcion.Text;
@@ -167,6 +220,8 @@ namespace plantilla_navegable.Forms
             objproductos.id_usuario = Convert.ToInt16(cmbusuario.SelectedValue);
             objproductos.id_autor = Convert.ToInt16(cmbautor.SelectedValue);
             controladorproductos.id_producto = Convert.ToInt16(txtidproducto.Text);
+            string nombreImagen = GuardarImagen(rutaImagen);
+            objproductos.imagen = nombreImagen;
 
             try
             {
@@ -217,10 +272,10 @@ namespace plantilla_navegable.Forms
 
         }
 
-       //Aca se manda el datagrid del otro formulario a este
+        //Aca se manda el datagrid del otro formulario a este
         public void CargarDatosDesdeTabla(DataGridViewRow filaSeleccionada)
         {
-            
+
             try
             {
                 // Asigna los valores de la fila seleccionada a los controles del formulario
@@ -264,11 +319,24 @@ namespace plantilla_navegable.Forms
                 txtporcentajedescuento.Text = filaSeleccionada.Cells[12].Value.ToString(); // "porcentaje"
                 txtisbn.Text = filaSeleccionada.Cells[13].Value.ToString(); // "isbn"
 
-               //LA IMAGEN FALTA [14]
+                // Cargar la imagen
+                string nombreImagen = filaSeleccionada.Cells[14].Value.ToString(); // Obtener el nombre de la imagen
+                string rutaCompletaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, nombreImagen); // Ruta completa de la imagen
+                string rutaImagenDefault = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, "default.png"); // Ruta de la imagen por defecto
+
+                // Verificar si la imagen existe
+                if (File.Exists(rutaCompletaImagen))
+                {
+                    pictureBoxImagen.Image = new Bitmap(rutaCompletaImagen); // Cargar la imagen si existe
+                }
+                else
+                {
+                    pictureBoxImagen.Image = new Bitmap(rutaImagenDefault); // Cargar la imagen por defecto si no existe
+                }
 
                 txtstock.Text = filaSeleccionada.Cells[15].Value.ToString(); // "stock"
 
-               
+
             }
             catch (Exception ex)
             {

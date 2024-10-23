@@ -15,12 +15,19 @@ namespace Controlador
         public controladorusuario() { }
         public int id_usuario { get; set; }
         public string nombre { get; set; }
+
         public int id_tipodoc { get; set; }
+
         public string numero_doc { get; set; }
+
         public string telefono { get; set; }
+
         public string correo_electronico { get; set; }
+
         public string direccion { get; set; }
+
         public string clave { get; set; }
+
         public int id_estadousuario { get; set; }
         public bool InsertarUsuario()
         {

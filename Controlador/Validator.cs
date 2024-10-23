@@ -119,10 +119,10 @@ public class Validator
     }
 
     //Validar el actualizar fecha que no sea a una pasada de la origina y de la actual
-    public static bool ValidateFutureDate(DateTime originalDate, string newDateValue)
+    public static bool ValidateFutureDate(DateTime fechaOriginal, string nuevaFechaValor)
     {
         // Intentar convertir la cadena nueva a DateTime
-        if (DateTime.TryParseExact(newDateValue, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime newDate))
+        if (DateTime.TryParseExact(nuevaFechaValor, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime nuevaFecha))
         {
             DateTime fechaActual = DateTime.Now; // Obtener la fecha actual
 
@@ -133,11 +133,12 @@ public class Validator
             }
 
             // Comparar la nueva fecha con la fecha original
-            return newDate >= originalDate; // Retorna true si la nueva fecha no es anterior a la original
+            return nuevaFecha >= fechaOriginal && nuevaFecha <= new DateTime(fechaActual.Year, 12, 31); // No permitir fechas mayores al 31 de diciembre del año actual
         }
 
         return false; // Si no se puede convertir la cadena a una fecha, retornar false
     }
+
 
 
 

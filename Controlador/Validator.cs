@@ -124,11 +124,21 @@ public class Validator
         // Intentar convertir la cadena nueva a DateTime
         if (DateTime.TryParseExact(newDateValue, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime newDate))
         {
+            DateTime fechaActual = DateTime.Now; // Obtener la fecha actual
+
+            // Verifica si la nueva fecha es mayor al año actual
+            if (nuevaFecha.Year > fechaActual.Year)
+            {
+                return false; // No permitir fechas de un año mayor al actual
+            }
+
             // Comparar la nueva fecha con la fecha original
             return newDate >= originalDate; // Retorna true si la nueva fecha no es anterior a la original
         }
+
         return false; // Si no se puede convertir la cadena a una fecha, retornar false
     }
+
 
 
 

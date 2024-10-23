@@ -62,7 +62,7 @@ namespace Controlador
             }
             else
             {
-                MessageBox.Show("No se puede actualizar a una fecha anterior a la fecha original.",
+                MessageBox.Show("No se puede actualizar a una fecha anterior a la fecha original o a una fecha a 31 de dicimebre de este año.",
                 "Error de Fecha", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1; // O un código de error apropiado
             }

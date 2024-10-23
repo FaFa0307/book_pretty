@@ -225,8 +225,18 @@ namespace plantilla_navegable.Forms
             objproductos.id_usuario = Convert.ToInt16(cmbusuario.SelectedValue);
             objproductos.id_autor = Convert.ToInt16(cmbautor.SelectedValue);
             controladorproductos.id_producto = Convert.ToInt16(txtidproducto.Text);
-            string nombreImagen = GuardarImagen(rutaImagen);
-            objproductos.imagen = nombreImagen;
+            // Verificar si se seleccionó una nueva imagen
+            if (!string.IsNullOrEmpty(rutaImagen))
+            {
+                // Guardar la nueva imagen y obtener el nombre único
+                string nombreImagen = GuardarImagen(rutaImagen);
+                objproductos.imagen = nombreImagen; // Actualizar con la nueva imagen
+            }
+            else
+            {
+                // Si no se seleccionó una imagen nueva, mantener la imagen actual en la base de datos
+                objproductos.imagen = imgOriginal; // Mantener la imagen actual
+            }
 
             try
             {
@@ -278,6 +288,7 @@ namespace plantilla_navegable.Forms
         }
 
         //Aca se manda el datagrid del otro formulario a este
+        public static string imgOriginal;
         public void CargarDatosDesdeTabla(DataGridViewRow filaSeleccionada)
         {
 
@@ -326,6 +337,7 @@ namespace plantilla_navegable.Forms
 
                 // Cargar la imagen
                 string nombreImagen = filaSeleccionada.Cells[14].Value.ToString(); // Obtener el nombre de la imagen
+                imgOriginal = nombreImagen;
                 string rutaCompletaImagen = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, nombreImagen); // Ruta completa de la imagen
                 string rutaImagenDefault = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imageRoute, "default.png"); // Ruta de la imagen por defecto
 
